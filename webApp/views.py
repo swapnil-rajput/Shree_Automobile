@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from webApp.forms import UserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from webApp.models import product
 
 
 def landingpage(request):
@@ -46,5 +47,6 @@ def logoutUser(request):
     return redirect('login')
 
 
-def product(request):
-    return render(request, 'product.html')
+def products(request):
+    images = product.objects.all()
+    return render(request, 'product.html', {'pictures': images})

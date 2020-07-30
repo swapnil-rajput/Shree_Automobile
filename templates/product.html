@@ -6,40 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Products{% endblock %}</title>
     <style>
-        .row{
-        border: 2px solid black;
+        #container1{
+        background-color:#e6e6e6;
         }
-        .card-body{
-        background-color:skyblue;
-        }
-        .main{
-        background-color:blue;
+        .fonts{
+        font-family: 'Source Serif Pro', serif;
+        color: black;
         }
     </style>
 </head>
 <body>
-{% block nav_block %}
-{% endblock %}
-<br><div class="container">
+{% block header %}
+
+{% endblock header %}
+<br><div class="container" id="container1">
   <div class="row">
+      {% for i in pictures %}
     <div class="col-lg-6">
-      welcome
-        <hr>
+        <h4 class="fonts">Product Name:&nbsp&nbsp{{i.name|title}}</h4>
+        <h4 class="fonts">Product Id:&nbsp&nbsp{{i.product_id}}</h4>
+
         <div class="card card-body">
-
+            <img src="{{i.image.url}}" style="width:100%;height:auto;">
         </div>
-
+        <hr>
     </div>
-    <div class="col-lg-6">
-      welcome
-        <hr>
-        <div class="card card-body">
-            sgsdffs
-        </div>
-
+{% endfor %}
     </div>
 </div>
 </div>
+
 </div>
+
+{% include 'footer.html' %}
+{% block footer %}
+
+{% endblock footer %}
+
 </body>
 </html>

@@ -1,0 +1,103 @@
+{% load static %}
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .full-footer{
+        background-color:#333333;
+        margin-bottom: 0px;
+        }
+
+        #foot_link{
+          color: #7e7b7b;
+          font-family: 'MuseoModerno', cursive;
+        }
+
+        p{
+          color: #7e7b7b;
+          font-size: 11px;
+
+        }
+
+        #line {
+          border-right: 2px solid black;
+          height: 200px;
+        }
+
+        #foot_logo{
+          font-size:14px;
+          color:#c7c1c1;
+
+        }
+
+       .fa{
+        padding: 10px;
+        font-size: 20px;
+        width: 20px;
+        text-decoration: none;
+        border-radius: 50%;
+        color:#7e7b7b;
+
+       }
+
+       .foot_bottom{
+        text-align: center;
+        color: #7e7b7b;
+        background-color: black;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+       }
+
+  </style>
+</head>
+<footer class="full-footer">
+  {% block footer %}
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-lg-5">
+              <a href="#" id="foot_link"><img class="img-fluid" src="{% static 'images/shreelogo1.png' %}" alt="imageNotFound"></a>
+              <h6 id="foot_link"style="color:#c7c1c1;">Shree Automobile services</h6>
+              <p id="foot_logo"> A-55,Aditya shopping complex,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mahalung Road, <br>
+              &nbsp;&nbsp;Shreepur-413112,INDIA.<br>
+              </p>
+            </div>
+      <br>
+
+      <div class="col-sm-3">
+       <h6> <a href="#" id="foot_link">OUR TOP BRANDS</a></h6><br>
+       <p><a>+&nbsp&nbspAUDI</a></p>
+       <p><a>+&nbsp&nbspBMW</a></p>
+       <p><a>+&nbsp&nbspHONDA</a></p>
+       <p><a>+&nbsp&nbspFORD</a></p>
+       <p><a>+&nbsp&nbspHYUNDAI</a></p>
+      </div>
+
+      <div class="col-sm-2">
+        <h6><a href="#" id="foot_link">SERVICES</a></h6><br>
+        <p><a>+&nbsp&nbspCAR WASH</a></p>
+       <p><a>+&nbsp&nbspOIL SERVIVCE</a></p>
+       <p><a>+&nbsp&nbspENGINE SERVICE</a></p>
+       <p><a>+&nbsp&nbspBATTERY SERVICE</a></p>
+       <p><a>+&nbsp&nbspWHEEL SERVICE</a></p>
+      </div>
+
+      <div class="col-sm-2">
+        <h7><a href="#" id="foot_link">CONTACT US</a></h7><br><br>
+        <p><a>OFFICE:(+91)021-478841503</a></p>
+        <P>SWAPNIL RAJPUT:+9199000123</P>
+        <P>EMAIL : info@shreeauto.in</P>
+        <p>
+          <a href="#" class="fa fa-facebook"></a>&nbsp&nbsp
+          <a href="#" class="fa fa-twitter"></a>&nbsp&nbsp
+          <a href="#" class="fa fa-google"></a>&nbsp&nbsp
+          <a href="#" class="fa fa-instagram"></a
+          </p>
+      </div>
+    </div>
+  </div>
+  <p class="foot_bottom"><br>Copyright &copy; ShreeAuto 2019-2020. All Right Reserved</p>
+
+  {% endblock %}
+</footer>
