@@ -50,3 +50,8 @@ def logoutUser(request):
 def products(request):
     images = product.objects.all()
     return render(request, 'product.html', {'pictures': images})
+
+
+def about_us(request):
+    return render(request, 'about.html')
+
