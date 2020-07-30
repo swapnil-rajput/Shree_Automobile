@@ -1,0 +1,51 @@
+{% include 'navbar.html' %}
+<html>
+    <head>
+        <title>{% block title %}Contact Us{% endblock title %}</title>
+        <style>
+            hr{
+                background-color:darkgrey;
+            }
+        </style>
+    </head>
+    <body>
+        {% block header %}
+
+        {% endblock header %}
+
+<br>
+<div class="container" style="background-color: #ebebe0";>
+    <div class= "content">
+        <h3>Contact Us</h3>
+        <hr>
+
+   <b> <u>OFFICE :</u></b>
+   <p>
+    A-55,Aditya shopping complex,<br>
+      Mahalung Road,<br>
+    Shreepur-413112,INDIA.
+    </p>
+<br><br>
+    <b><u>BRANCH OFFICE :</u></b>
+    <p>
+    140, DDA COMPLEX, PANDHARPUR<br>
+    NEAR VITTHAL TEMPLE,
+    MAHARASHTRA - 413304<br>
+    PH. : 021-02124020 , +91-990000119.
+    </p>
+<br><br>
+    <b><u>E-MAIL:</u></b>
+    <p>
+    INFO : info@shreeauto.in <br>
+    SALE : sales@shreeauto.in<br>
+    SUPPORT : support@shreeauto.in<br>
+    </p>
+    </div>
+    <br>
+</div><br>
+        {% include 'footer.html' %}
+        {% block footer %}
+
+        {% endblock footer %}
+    </body>
+</html>
