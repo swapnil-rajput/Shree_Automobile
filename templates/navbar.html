@@ -8,15 +8,18 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
   <style>
-        #logo{
+  #logo{
         width:100%;
         height:50px;
         }
+
   </style>
 </head>
 <body>
-{% block nav_block%}
+{% block header %}
+<header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
   <a class="navbar-brand" href="{% url 'landing' %}"><img id="logo" src="{% static 'images/shreelogo1.png'%}"></a>
@@ -36,11 +39,11 @@
           Services
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Car washing</a>
-          <a class="dropdown-item" href="#">Oil Change</a>
-          <a class="dropdown-item" href="#">Engine service</a>
-          <a class="dropdown-item" href="#">Battery maintainance</a>
-          <a class="dropdown-item" href="#">Wheel Alignment</a>
+          <a class="dropdown-item" href="{% url 'services'%}">Car washing</a>
+          <a class="dropdown-item" href="{% url 'services'%}">Oil Change</a>
+          <a class="dropdown-item" href="{% url 'services'%}">Engine service</a>
+          <a class="dropdown-item" href="{% url 'services'%}">Battery maintainance</a>
+          <a class="dropdown-item" href="{% url 'services'%}">Wheel Alignment</a>
         </div>
       </li>
       <li class="nav-item">
@@ -52,7 +55,11 @@
           </ul>
   </div>
     </div>
-</nav>
 {% endblock %}
+</nav>
+</header>
+{% block body%}
+
+{% endblock body%}
 </body>
 </html>

@@ -1,0 +1,49 @@
+{% include 'navbar.html'%}
+{% load static %}
+<head>
+<title>{% block title %}Services{% endblock title %}</title>
+<style>
+
+    body{
+        background-color: #e6e6e6;
+    }
+    .heading{
+        color: #272624;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: x-large;
+        text-decoration: underline;
+    }
+    .images
+    {
+        width: 100%;
+
+    }
+</style>
+</head>
+{% block header %}
+
+{% endblock header %}
+<br>
+<div class="container" id="services">
+    <h6 class="heading">Car Washing:-</h6>
+    <hr>
+    <div class="content">
+        <img src="{% static 'images/carwash1.jpg' %}" class="images">
+    </div><br>
+    <h6 class="heading">Oil Services:-</h6>
+    <hr>
+    <div class="content">
+        <img src="{% static 'images/oil.jpg' %}" class="images">
+    </div><br>
+    <h6 class="heading">Engine Services:-</h6>
+    <hr>
+    <div class="content">
+        <img src="{% static 'images/engine1.jpg' %}" class="images">
+    </div>
+<br>
+</div>
+<br>
+{% include 'footer.html' %}
+{% block footer %}
+
+{% endblock footer %}

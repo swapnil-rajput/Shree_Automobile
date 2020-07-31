@@ -58,3 +58,7 @@ def about_us(request):
 
 def contact_us(request):
     return render(request, 'contact.html')
+
+
+def service(request):
+    return render(request, 'service.html')
