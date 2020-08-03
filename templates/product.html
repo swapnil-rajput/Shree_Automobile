@@ -8,7 +8,12 @@
     <style>
         #container1{
         background-color:#e6e6e6;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        overflow-y: scroll;
         }
+
         .fonts{
         font-family: 'Source Serif Pro', serif;
         color: black;
@@ -19,7 +24,8 @@
 {% block header %}
 
 {% endblock header %}
-<br><div class="container" id="container1">
+<br>
+<div class="container" id="container1">
   <div class="row">
       {% for i in pictures %}
     <div class="col-lg-6">
@@ -31,17 +37,14 @@
         </div>
         <hr>
     </div>
-{% endfor %}
-    </div>
-</div>
+      {% endfor %}
+  </div>
 </div>
 
-</div>
 
 {% include 'footer.html' %}
 {% block footer %}
 
 {% endblock footer %}
-
 </body>
 </html>
