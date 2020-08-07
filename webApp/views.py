@@ -62,3 +62,7 @@ def contact_us(request):
 
 def service(request):
     return render(request, 'service.html')
+
+
+def customer_page(request):
+    return render(request, 'customer.html')
