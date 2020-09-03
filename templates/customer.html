@@ -1,53 +1,74 @@
+<!DOCTYPE html>
 {% include 'navbar.html' %}
 {% load static %}
 <head>
-    <title>{% block title %}customer page {% endblock title %}</title>
-    <link rel="shortcut icon"  href="{% static 'images/customer.png' %}"/>
-<style>
-    h1{
-    text-align:center;
-    }
-    body{
-    background-color:lightblue;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link rel="shortcut icon" href="{% static 'images/customer.png' %}"/>
+    <style>
+        .main
+        {
+            
+            border: 1px solid gray;
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color:#e6e6e6;
+            #bddcf1;
+            height: 540px;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        .cont1
+        {
+            margin-top: 30px;
+            border: 1px solid gray;        
+        }        
+        .errorlist{
+            list-style-type:none;
+            color: red;
+            font-size: medium;
+            font-style: Bold;
+        }
+    </style>
 </head>
 <body>
-{% block header %}
 
-{% endblock header %}
-<div class="container cont">
-    <h1>customer register</h1>
-    <div class="row">
-        <div class="col-sm-0"></div>
-        <div class="col-md-6">
-            <form method="post">
-            <label class="label col-sm-6 ">First name</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" name="name" placeholder="Enter your first name">
-            </div>
-            <label class="label col-sm-6 ">Last Name</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="name" placeholder="Username">
-            </div>
-        </div>
 
-        <div class="col-md-6">
-            <label class="label col-sm-6 ">Email</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="name" placeholder="Username">
-            </div>
-            <label class="label col-sm-6 ">ID</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="name" placeholder="Username">
-            </div>
-        </div>
+<div class="main">
+<form method="POST">    <!-- -----------------customer section--------------- -->
+<div class="container cont1">
+    <h1 class="text-center">Customer register</h1>
+        <div class="row">
 
+                {% csrf_token %}
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                {{form.name.label_tag}}{{form.name}}
+                {{form.last_name.label_tag}}{{form.last_name}}
+                {{form.email.label_tag}}{{form.email}}
+                {{form.address.label_tag}}{{form.address}}                    
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                
+               {{form.username.label_tag}}{{form.username}} 
+               {{form.password.label_tag}}{{form.password}} 
+               {{form.password1.label_tag}}{{form.password1}} 
+               {{form.mobile_no.label_tag}}{{form.mobile_no}} 
+               
+            </div>            
+            <div class="col-md-1"></div>         
+            <br>
+        </div> 
+        <center>{{form.non_field_errors}} </center>
+        <center><input type="submit" class="btn btn-primary" value="Submit"></center><br>        <!-- ----------vehicle section--------- -->
+        <br>                  
     </div>
-</form>
-<br>
 </div>
-<div class="container">
-<h1>** vehicle register **</h1>
-    </div>
+</form>
+{% include 'footer.html' %}     
+{% block footer%}
+{% endblock footer %}
 </body>
+</html>

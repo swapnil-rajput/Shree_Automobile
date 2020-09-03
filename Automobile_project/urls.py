@@ -28,7 +28,8 @@ urlpatterns = [
     path('about_us/', views.about_us, name='about_us'),
     path('contact_us/', views.contact_us, name='contact_us'),
     path('services/', views.service, name='services'),
-    path('customer/', views.customer_page, name='customer'),
+    path('customer/', views.customers_page, name='customer'),
+    path('vehicle/', views.Vehicle_page,name='vehicle'),
 
 ]
 if settings.DEBUG:
