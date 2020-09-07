@@ -30,6 +30,13 @@
             font-size: medium;
             font-style: Bold;
         }
+        #link1
+        {
+        text-align:right;
+        padding-right:80px;
+        font-size:medium;
+        font-size:20px;
+        }
     </style>
 </head>
 <body>
@@ -37,10 +44,10 @@
 
 <div class="main">
 <form method="POST">    <!-- -----------------customer section--------------- -->
+    <p id="link1"><a href="{% url 'vehicle' %}">Register Vehicle</a></p>
 <div class="container cont1">
     <h1 class="text-center">Customer register</h1>
         <div class="row">
-
                 {% csrf_token %}
             <div class="col-md-1"></div>
             <div class="col-md-4">
@@ -51,7 +58,6 @@
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-4">
-                
                {{form.username.label_tag}}{{form.username}} 
                {{form.password.label_tag}}{{form.password}} 
                {{form.password1.label_tag}}{{form.password1}} 

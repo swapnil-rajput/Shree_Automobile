@@ -95,5 +95,6 @@ def Vehicle_page(request):
             type = request.POST['type']
             number = request.POST['number']
             owmer = request.POST['owner']
+            form.save()
             return HttpResponse("Thanks for registeration")
     return render(request, 'vehicle.html', {'form': form})

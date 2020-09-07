@@ -51,6 +51,7 @@ class CustomerForm(forms.ModelForm):
          'placeholder': 'Enter your mobile number'}))
 
     def clean_username(self):
+        cleaned_data = super().clean()
         uname = self.cleaned_data['username']
         if customer.objects.filter(username=uname).exists():
             raise forms.ValidationError(("*Username already exists"),code='invalid')
